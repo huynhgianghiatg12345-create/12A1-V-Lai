@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chúc mừng 20/10 – Các cô gái 12A1</title>
+<meta property="og:title" content="Chúc mừng 20/10 – Các cô gái 12A1">
+<meta property="og:description" content="Món quà nhỏ của cả lớp gửi các bạn nữ 12A1.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#4a0b2a;--rose:#d81b60;--deep:#9c1248;--blush:#ffd9e4;--paper:#fff3f6;--board:#c9a27c;--ink:#3a1626}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);background:var(--board);line-height:1.6}
+body.lock{overflow:hidden}
+
+/* STAGE: nền trắng pha hồng nhạt */
+.stage{position:relative;min-height:100vh;min-height:100svh;background:radial-gradient(#ffc2d4 1.2px,transparent 1.6px) 0 0/22px 22px,linear-gradient(160deg,#fff 0%,#ffeaf1 50%,#ffd3e1 100%);overflow:hidden}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}
+
+/* HOA, CỎ, STICKER */
+.fl{flex:none;aspect-ratio:1/2;width:auto;position:relative;z-index:1;transform-origin:50% 100%;animation:sway 4s ease-in-out infinite;filter:drop-shadow(0 2px 2px rgba(120,20,60,.2))}
+@keyframes sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.gr{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:16px;z-index:0}
+.fallbox{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
+.fall{position:absolute;top:0;line-height:1;animation:drop linear infinite;will-change:transform;filter:drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff) drop-shadow(0 3px 3px rgba(150,20,70,.35))}
+.fall.t{filter:drop-shadow(0 3px 3px rgba(150,20,70,.3));font:700 .8rem/1.2 'Be Vietnam Pro',sans-serif;background:#fff;color:var(--deep);border:2px dashed var(--rose);border-radius:99px;padding:3px 10px;white-space:nowrap}
+.petal{position:absolute;top:0;width:14px;height:18px;background:#ff8fb1;border-radius:70% 0 70% 0;opacity:.8;animation:drop linear infinite}
+@keyframes drop{from{transform:translate(0,-12vh) rotate(0)}to{transform:translate(var(--dx),112vh) rotate(var(--rot))}}
+
+/* KHUNG ẢNH QUANH NỘI DUNG */
+.frame{position:relative;z-index:2;display:grid;gap:6px;padding:10px;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(9,minmax(78px,1fr));min-height:100vh;min-height:100svh}
+.center{position:relative;grid-column:2/-2;grid-row:2/-2;display:grid;place-items:center;min-height:0}
+.rosecell{position:relative;display:flex;align-items:flex-end;justify-content:center}
+.hero-card{position:relative;z-index:2;max-width:760px;max-height:100%;overflow:auto;text-align:center;color:var(--ink);background:rgba(255,255,255,.92);border:2px solid #ff8fb1;outline:2px dashed #ffb3c9;outline-offset:-9px;border-radius:22px;padding:16px 14px 12px;box-shadow:0 14px 40px rgba(216,27,96,.25);animation:pop 1s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.85)}}
+.hero-card .date{font-family:'Dancing Script',cursive;font-size:1.25rem;color:var(--rose);line-height:1.2}
+.hero-card h1{text-wrap:balance;font-family:'Playfair Display',serif;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1;font-size:1.4rem;line-height:1.15;margin:4px 0 8px;color:var(--wine)}
+.hero-card p{font-size:.8rem;line-height:1.5;color:#5c2c3d}
+.hero-card .to{margin-top:10px;font-family:'Dancing Script',cursive;font-size:1.15rem;color:var(--deep)}
+.hero-card .hint{margin-top:6px;font-size:.7rem;color:#a8446a}
+.strip{position:relative;height:60px;margin-top:10px;display:flex;justify-content:space-around;align-items:flex-end}
+.garden{display:none;position:absolute;bottom:0;z-index:1;pointer-events:none;width:clamp(70px,12%,170px);height:min(46%,300px);align-items:flex-end;justify-content:space-around}
+@media(min-width:800px){
+ .frame{gap:12px;padding:16px;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));height:100vh;height:100svh;min-height:0}
+ .garden{display:flex}
+ .hero-card{padding:clamp(16px,3.5vh,40px) clamp(20px,3vw,44px) clamp(12px,2.5vh,28px);border-radius:28px}
+ .hero-card .date{font-size:clamp(1.4rem,3.6vh,2.2rem)}
+ .hero-card h1{text-wrap:balance;font-size:clamp(1.8rem,6.5vh,3.8rem);margin:6px 0 12px}
+ .hero-card p{font-size:clamp(.9rem,2.4vh,1.15rem);line-height:1.6}
+ .hero-card .to{font-size:clamp(1.2rem,3vh,1.6rem);margin-top:14px}
+ .hero-card .hint{font-size:.85rem}
+ .strip{height:clamp(60px,11vh,110px)}
+}
+
+/* POLAROID */
+.pol{position:relative;background:#fff;padding:12px 12px 14px;border:0;cursor:pointer;text-align:center;font:inherit;color:inherit;box-shadow:0 8px 16px rgba(60,20,30,.3);transform:rotate(var(--r));transition:transform .25s,box-shadow .25s}
+.pol:hover,.pol:focus-visible{transform:rotate(0) scale(1.1);box-shadow:0 18px 30px rgba(60,20,30,.45);z-index:5;outline:3px solid var(--rose)}
+.pol::before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:26px;margin-left:-42px;background:rgba(255,182,203,.8);transform:rotate(var(--t));box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.pol .cap{font-family:'Dancing Script',cursive;font-size:1.45rem;color:var(--wine);margin-top:8px;line-height:1.15}
+.pic{position:relative;aspect-ratio:4/5;background:linear-gradient(160deg,#ffc2d4,#ff8fb1);overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover;display:block}
+.pic .ph{display:none;position:absolute;inset:0;place-items:center;font-family:'Playfair Display',serif;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1;font-size:4rem;color:#fff;text-shadow:0 3px 8px rgba(120,10,60,.5)}
+.pic.noimg .ph{display:grid}
+.frame .pol{width:100%;height:100%;min-width:0;display:flex;flex-direction:column;padding:4px 4px 2px}
+.frame .pol::before{top:-6px;width:34px;height:12px;margin-left:-17px}
+.frame .pic{flex:1;aspect-ratio:auto;min-height:0}
+.frame .pol .cap{font-size:.9rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame .pol .ph{font-size:1.8rem}
+@media(min-width:800px){
+ .frame .pol{padding:8px 8px 4px}
+ .frame .pol::before{top:-9px;width:60px;height:18px;margin-left:-30px}
+ .frame .pol .cap{font-size:clamp(1rem,2.6vh,1.35rem);margin-top:4px}
+ .frame .pol .ph{font-size:3rem}
+}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:rgba(50,5,28,.82);padding:14px;overflow-y:auto}
+.modal.on{display:grid}
+.page{position:relative;width:min(900px,100%);max-height:94vh;overflow-y:auto;background:var(--paper);border-radius:6px 22px 22px 6px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);box-shadow:0 30px 80px rgba(0,0,0,.6);border-left:14px solid var(--deep);animation:flip .45s ease both;transform-origin:left center}
+@keyframes flip{from{opacity:0;transform:perspective(1200px) rotateY(-35deg)}}
+.page .left{padding:26px 18px 18px;background:repeating-linear-gradient(0deg,#ffe6ed 0 1px,transparent 1px 28px)}
+.page .left .pol{display:block;margin:6px auto 0;cursor:default;max-width:300px;--r:-2deg}
+.page .left .pol:hover{transform:rotate(-2deg);box-shadow:0 8px 16px rgba(60,20,30,.3)}
+.page .right{padding:30px 28px 26px}
+.page h3{font-family:'Playfair Display',serif;font-variant-numeric:lining-nums;font-feature-settings:'lnum' 1;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--wine);line-height:1.15}
+.badge{display:inline-block;margin:8px 0 14px;background:var(--rose);color:#fff;font-family:'Dancing Script',cursive;font-size:1.35rem;padding:2px 16px;border-radius:99px;transform:rotate(-2deg)}
+.item{margin-top:12px;padding:10px 14px;border-radius:12px;background:#fff;border-left:5px solid var(--rose)}
+.item b{display:block;color:var(--deep);font-size:.95rem}
+.item span{font-size:.97rem}
+.wish{margin-top:16px;font-family:'Dancing Script',cursive;font-size:1.45rem;color:var(--deep);text-align:center}
+.x,.nav{position:fixed;z-index:60;border:0;cursor:pointer;background:#fff;color:var(--wine);font-size:1.5rem;width:46px;height:46px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+.x{top:14px;right:14px}.nav{top:50%;margin-top:-23px}.prev{left:8px}.next{right:8px}
+.x:hover,.nav:hover{background:var(--rose);color:#fff}
+
+/* FOOTER + MUSIC */
+footer{background:var(--wine);color:#ffd9e4;text-align:center;padding:30px 16px;font-family:'Dancing Script',cursive;font-size:1.5rem}
+.music{position:fixed;left:14px;bottom:14px;z-index:70;display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:99px;border:2px solid #fff;background:var(--rose);color:#fff;font:700 .9rem 'Be Vietnam Pro',sans-serif;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.music .disc{display:inline-block}
+.music.play .disc{animation:spin 2s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:700px){
+ .page{grid-template-columns:1fr;border-left-width:8px}
+ .page .left{padding-bottom:6px}
+ .nav{top:auto;bottom:14px;margin:0}.prev{left:auto;right:70px}.next{right:14px}
+ .grid{grid-template-columns:repeat(2,1fr);gap:30px 14px}
+ .pol .cap{font-size:1.2rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fallbox{display:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="rose" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="47" fill="#b3123f"/>
+  <circle cx="50" cy="50" r="36" fill="#d81b60"/>
+  <path d="M50 50m-28 0a28 28 0 1 1 56 0a22 22 0 1 1-44 0a16 16 0 1 1 32 0a10 10 0 1 1-20 0a5 5 0 1 1 10 0" fill="none" stroke="#ff9db9" stroke-width="4" stroke-linecap="round"/>
+ </symbol>
+  <symbol id="tulip" viewBox="0 0 60 120">
+   <path d="M30 44C28 70 32 95 30 120" stroke="#3f9b5a" stroke-width="4" fill="none" stroke-linecap="round"/>
+   <path d="M30 104C14 98 6 82 8 66C22 72 30 88 30 104Z" fill="#4caf6a"/>
+   <path d="M30 96C46 90 54 76 52 60C38 66 30 80 30 96Z" fill="#3f9b5a"/>
+   <path d="M30 6C12 8 10 34 30 46C50 34 48 8 30 6Z" fill="var(--c,#ff5c8a)"/>
+   <path d="M30 2C20 14 20 34 30 46C40 34 40 14 30 2Z" fill="#fff" fill-opacity=".28"/>
+  </symbol>
+  <symbol id="rosef" viewBox="0 0 60 120">
+   <path d="M30 40C32 70 28 95 30 120" stroke="#3f9b5a" stroke-width="4" fill="none" stroke-linecap="round"/>
+   <path d="M30 100C14 94 8 80 10 68C24 74 30 86 30 100Z" fill="#4caf6a"/>
+   <path d="M30 88C46 82 52 68 50 56C36 62 30 74 30 88Z" fill="#3f9b5a"/>
+   <circle cx="30" cy="24" r="22" fill="var(--c,#d81b60)"/>
+   <circle cx="30" cy="24" r="16" fill="#fff" fill-opacity=".14"/>
+   <path d="M30 24m-15 0a15 15 0 1 1 30 0a11 11 0 1 1-22 0a7 7 0 1 1 14 0a3.5 3.5 0 1 1-7 0" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="grass" viewBox="0 0 100 30"><path d="M4 30C6 16 8 8 10 2C13 12 14 20 16 30Z M22 30C22 18 26 10 30 6C30 16 32 22 34 30Z M42 30C44 14 46 8 50 0C52 12 54 20 56 30Z M64 30C64 18 68 10 74 6C73 16 74 22 76 30Z M82 30C84 18 88 10 94 8C92 18 92 24 96 30Z" fill="#5cb872"/></symbol>
+</svg>
+
+<div class="stage" id="top">
+ <!-- Video nền (tùy chọn): bỏ file vào video/hero.mp4. Không có file thì tự ẩn -->
+ <video autoplay muted loop playsinline onerror="this.remove()"><source src="video/hero.mp4" type="video/mp4"></video>
+ <main class="frame" id="frame">
+  <section class="center">
+   <div class="garden" id="gl" style="left:0"></div><div class="garden" id="gr" style="right:0"></div>
+   <div class="hero-card">
+    <div class="date">Chào mừng ngày 20/10</div>
+    <h1>Gửi những bông hồng của lớp 12A1</h1>
+    <p>Chúc các bạn nữ lớp 12A1 luôn được yêu thương, xinh đẹp, hạnh phúc và thật mạnh mẽ để vượt qua những thử thách phía trước. Cảm ơn các bạn vì đã làm thanh xuân của lớp trở nên đáng nhớ.</p>
+    <div class="to">Gia Nghĩa, đại diện các bạn nam trong lớp</div>
+    <div class="hint">📌Bấm vào từng tấm ảnh để đọc trang riêng của mỗi bạn nhé!</div>
+    <div class="strip" id="strip"></div>
+   </div>
+  </section>
+ </main>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Trang riêng của bạn">
+ <button class="x" id="close" aria-label="Đóng">✕</button>
+ <button class="nav prev" id="prev" aria-label="Bạn trước">‹</button>
+ <button class="nav next" id="next" aria-label="Bạn sau">›</button>
+ <article class="page" id="page"></article>
+</div>
+
+<!-- Nhạc nền: bỏ file vào music/music.mp3 -->
+<audio id="bgm" loop preload="auto"><source src="music/music.mp3" type="audio/mpeg"></audio>
+<button class="music" id="music" aria-label="Bật hoặc tắt nhạc"><span class="disc">💿</span><span id="mtext">Bật nhạc</span></button>
+
+<script>
+/* ============ CHỈNH NỘI DUNG Ở ĐÂY ============
+   Mỗi bạn: name (tên), nick (biệt danh), tal (tài năng), hab (thói quen vui), mem (kỷ niệm), wish (lời chúc riêng), img (đường dẫn ảnh, bỏ trống thì dùng images/01.jpg ...)
+   Ô nào để trống '' thì web tự điền một câu mẫu vui để bạn sửa sau. */
+const S = [
+ {name:'Hiểu Ngân'},{name:'Thảo Vy'},{name:'Bích Hiền'},{name:'Kiều Diễm'},
+ {name:'Thuỳ Dung'},{name:'Bình Minh'},{name:'Thiên Xinh'},{name:'Trúc Loan'},
+ {name:'Bích Diệp'},{name:'Kim Huệ'},{name:'Như Ý'},{name:'Quý Thương'},
+ {name:'Thị Trúc'},{name:'Thảo Kim'},{name:'Thuý Nga'},{name:'Thanh Mơ'},
+ {name:'Thu Thảo'},{name:'Thuý Hằng'},{name:'Thanh Nhã'},{name:'Yến Quyên'},
+ {name:'Minh Trâm'},{name:'Hồng Hoa'},{name:'Bích Sen'}
+];
+/* Câu mẫu dùng tạm khi chưa điền */
+const P={
+ nick:['Chiến thần văn nghệ',
+'Chúa tể gymer',
+'Cú đấm sấm sét',
+'Bà hoàng bắt trend',
+'Phú bà tương lai',
+'Đóm chúa',
+'Đô bất tử',
+'Bậc thầy né phát biểu',
+'Hắc mã công chúa',
+'Idol Kpop',
+'Vua đầu bếp',
+'Đại sứ mì cay',
+'Nữ thần deadline',
+'Chúa tể overthinking',
+'Boss hệ cún',
+'Bộ trưởng ngoại giao',
+'Chị đại 12A1',
+'Đài phát thanh 24/7',
+'Bộ trưởng hóng drama',
+'Học bá',
+'Chiến thần ăn vặt',
+'Bông',
+'Nữ streamer đời đầu'],
+ tal:['Ít học bài mà đến cuối kỳ tổng kết điểm lại cao',
+'Có thể sống thiếu tiền nhưng không thể thiếu đồ ăn ngon',
+'Nhắn “đang đi” khi vẫn còn ở nhà',
+'Đọc vị bạn thân mà không cần mở lời',
+'Có khả năng nhận ra một chiếc story đáng nghi',
+'Tạo dáng trước camera như đã ký hợp đồng với hãng thời trang',
+'Biến mọi cuộc tụ tập thành chương trình giải trí trực tiếp',
+'Biến “học nhóm” thành “ăn nhóm”',
+'Chuyên gia hỏi “câu này làm sao?” ngay sau khi nộp bài',
+'Có khả năng nhận biết giáo viên sắp gọi tên',
+'Biến câu “dễ mà” thành “ủa, sao lạ vậy?”',
+'Khoanh đáp án bằng trực giác của một nhà tiên tri',
+'Nhớ giá trà sữa tốt hơn nhớ công thức Toán',
+'Sở hữu bộ nhớ 512 GB cho chuyện vui và 2 MB cho bài học',
+'Nói chuyện xuyên lục địa, không cần sạc pin',
+'Tư vấn tình cảm cho cả thế giới nhưng chuyện mình thì để sau',
+'Có khả năng làm cả lớp mất tập trung chỉ bằng một ánh mắt',
+'Nói “tao không biết” nhưng biết hết mọi chuyện',
+'Ăn no rồi vẫn có chỗ cho trà sữa',
+'Có khả năng học thuộc bài ngay trước giờ kiểm tra',
+'Có thể kể một chuyện trong 2 phút thành 2 tiếng',
+'Ăn vặt trong mọi hoàn cảnh, kể cả lúc ôn thi',
+'Đọc đề 5 lần vẫn thấy nó đang thách thức mình'],
+ hab:['Chụp ảnh xong phải chỉnh màu mới chịu đăng',
+'Có thói quen cầu nguyện trước khi nhận bài kiểm tra',
+'Đi đâu cũng phải rủ bạn Xinh đi cùng haha',
+'Lướt TikTok định 5 phút, ngẩng đầu đã hết buổi tối',
+'Có thói quen hỏi “rồi sao nữa?” dù câu chuyện vừa kết thúc',
+'Buồn ngủ cả ngày nhưng tối đến lại tỉnh như sáo',
+'Thấy điện thoại rung là phản xạ nhanh hơn vận động viên',
+'Nhớ chuyện quê của bạn thân lâu hơn nhớ bài học',
+'Mở sách ra học rồi tiện tay mở điện thoại',
+'Có thể ngủ trong mọi tư thế miễn là đủ mệt',
+'Xóa ảnh vì không đẹp dù bạn bè bảo đẹp rồi',
+'Chép bài nhanh hơn tốc độ suy nghĩ',
+'Online liên tục nhưng nhắn tin thì trả lời lúc có lúc không',
+'Mở điện thoại định xem giờ, 30 phút sau vẫn chưa đặt xuống',
+'Luôn hỏi “có bài tập về nhà không?”',
+'Đặt 10 cái báo thức nhưng chỉ nghe thấy cái cuối',
+'Cuối tuần ngủ bù cho tất cả những ngày đi học',
+'Nhìn thấy đồ ăn là quên hết muộn phiền',
+'Vừa ăn xong đã hỏi lát nữa uống gì',
+'Luôn bật chế độ bí ẩn trước đám đông',
+'Luôn là người chụp ảnh cho cả nhóm nhưng ảnh mình phải đẹp nhất',
+'Block t mà nói lý do là lọc bạn, bạn bè cấp 1 mà dẫy á haizz',
+'Vừa nghe giảng vừa gật gù, không rõ đang hiểu hay đang ngủ'],
+ mem:['Biết nhau từ mỗi giáo, bạn hay tham gia văn nghệ, bạn rất sợ dò bài môn Hoá thầy Tồn haha (ko biết sao từ đó bạn rất ghét hoá) đi thi là bạn hay nhờ mình và Nga chỉ bài kkk',
+'Hay hóng mỗi khi cô Hằng livestream bóc phốt 1 ai đó, và cùng hóng idol Bích Sen nay đi qua Cam rồi hay sao mà mất liên lạc',
+'Người phụ nữ lực điền, đấm 1 phát chắc bất tỉnh, im im vậy chớ gốm lắm á không phải dỡn đâu',
+'Hơi rụt rè, nhút nhát, trong học tập thì học giỏi, chăm chỉ và bạn hay hỏi bài haha. Tuy tỏ vẻ lạnh lùng nhưng bên trong lại rất ấm áp và quan tâm bạn bè',
+'Rất kỉ luật nha, nhờ bạn rủ đi đạp xe mà mình ốm hơn á chứ ko là như con heo',
+'Bất ngờ khi có 1 đồng môn là fan cứng của Jack, quá tự hào luôn haha, mỗi khi Jack ra bài mới là rủ nhau dô cày view',
+'Hồi tết dìa lỡ rủ Hiền mà quên nhắn Xinh nên cho bạn xin lỗi nha, chứ ko phải là bỏ bạn đâu haha',
+'Rất ít nói nhưng khi đi cà phê lại nói nhiều nha và còn biết nhiều thứ haha',
+'Lần bị gọi lên bảng dò bài môn Công nghệ thầy Miền, bạn ấy không thuộc bài và còn lẫm bẫm "Sơn điện cơ" haha',
+'Bạn rất hiền, dễ gần, siêng năng',
+'Nấu ăn ngon, đảm đang và luôn cởi mở',
+'Nói chuyện rất thoải mái và tự nhiên, trong lớp thì bạn ít giao tiếp với mọi người',
+'Bạn hơi hướng nội nhưng đi chơi lại hướng ngoại nên cũng được',
+'Chưa tiếp xúc nhiều nhưng bạn rất trầm và học địa giỏi lắm',
+'Học chung bồi dưỡng Hoá và hay hỏi bài qua lại, đi thi cuối kỳ cũng hay trao đổi đôi lúc bị nhắc tên',
+'Rất nhiệt tình hỏi thì bạn trả lời và chỉ bài một cách kĩ lưỡng, chu đáo',
+'Người quyền lực nhất lớp nhưng nhờ có bạn lớp mới phấn đấu thi đua chớ ko thì lại như cái chợ Đồng Phó. Chơi cũng nhiệt tình và học tập thì cũng hết mình',
+'Hay ý kiến mỗi khi sinh hoạt lắm, bị vi phạm nói chuyện cũng phải kéo theo người khác chết chùm. Không thuộc bài thì hơi mít ướt haha',
+'Miệng thì hay nói mình nhiều chuyện nhưng cũng quan tâm bạn bè lắm á',
+'Lên nhà bạn chơi và được tiếp đãi rất chu đáo, bạn sống rất giản dị và đầy tình cảm',
+'Hơi dữ và lý lẽ nhưng cũng hay cho mượn vở chép bài và soạn bài môn văn ghét nhất trên đời',
+'Lái xe đạp tông vào cột điện và cái kết là cái xe gãy thành 2 phần',
+'Thời kỳ đỉnh cao live stream phải chạy theo để xin chữ ký và trên live yêu cầu bạn hát bài j mà phong trên mái nhà j đó, cũng hông nhớ rõ nữa. Mà bây giờ bạn đi làm giàu ở đâu đó rồi nên trốn khỏi đất Bình Khê này rồi'],
+ wish:['Luôn xinh đẹp, tự tin, độc lập và nhiều tiền!',
+'Gặp toàn chuyện vui, người tốt, đi đâu cũng có đồ ăn!',
+'May mắn ngập tràn, kiểm tra toàn trúng tủ, không học tủ sai!',
+'Quà đầy tay, lời khen đầy tai, niềm vui đầy tim!',
+'Sớm thành phú bà, mua đồ không cần nhìn giá!',
+'Mãi xinh đẹp, hạnh phúc và giữ thật nhiều kỷ niệm đẹp!',
+'20/10 xinh đẹp, tiền đầy túi, crush tự đổ haha!',
+'Mong mọi điều bạn muốn đều thành hiện thực!',
+'Nhan sắc thăng hạng, sớm có người yêu 🤣!',
+'Ngày càng xinh, càng giỏi, càng giàu!',
+'Sớm có người yêu, nhớ giới thiệu cho cả lớp nha! 🤣',
+'20/10 vui hết nấc, đẹp hết phần thiên hạ!',
+'Luôn được yêu thương, tặng quà và bao trà sữa!',
+'Bớt overthinking, tăng tiền tiết kiệm, giảm giờ thức khuya!',
+'Xinh như hoa, giàu như đại gia, vui như được nghỉ học!',
+'Luôn rạng rỡ, cười nhiều hơn khóc, ngủ nhiều hơn học haha!',
+'Luôn vui vẻ, tiền vào như nước, drama tự né!',
+'Mãi đáng yêu, bớt báo đời, tăng báo hiếu haha!',
+'Ăn hoài không mập, tiền vô như nước sông Đà, công việc thăng tiến!',
+'Tươi như hoa, ví đầy tiền, cuộc đời toàn màu hồng!',
+'Vui như trúng số, hạnh phúc như được nghỉ Tết!',
+'Sớm chống lầy và nhớ mời nhen m',
+'Sớm đạt ước mơ, thành công rực rỡ, nhớ bao lớp một bữa nha!']
+};
+const pick=(a,i)=>a[i%a.length];
+const pad=n=>String(n+1).padStart(2,'0');
+
+/* ============ HOA, CỎ, STICKER RƠI ============ */
+const rnd=(a,b)=>a+Math.random()*(b-a);
+const COL=['#ff5c8a','#ff8fb1','#e8467c','#ffa94d','#c77dff','#ff6b6b'];
+function flower(h,i){
+ const k=Math.random()<.5?'tulip':'rosef';
+ return '<svg class="fl" viewBox="0 0 60 120" style="--c:'+COL[i%COL.length]+';height:'+h+'%;animation-duration:'+rnd(3,5.5).toFixed(1)+'s;animation-delay:-'+rnd(0,4).toFixed(1)+'s"><use href="#'+k+'"/></svg>';
+}
+function grass(){
+ return '<svg class="gr" viewBox="0 0 400 30" preserveAspectRatio="none"><use href="#grass" x="0" width="100" height="30"/><use href="#grass" x="100" width="100" height="30"/><use href="#grass" x="200" width="100" height="30"/><use href="#grass" x="300" width="100" height="30"/></svg>';
+}
+function garden(el,n){let h=grass();for(let i=0;i<n;i++)h+=flower(rnd(50,100),i);el.innerHTML=h}
+garden(document.getElementById('strip'),6);
+garden(document.getElementById('gl'),3);
+garden(document.getElementById('gr'),3);
+(function(){
+ const box=document.createElement('div');box.className='fallbox';document.body.appendChild(box);
+ const EM=['🌷','🌹','🌸','💖','🎀','🧸','🍓','😆','🥳','🎉','🐱','💐','✨','🦋','🍭','😻'];
+ const TX=['Xinh nhất lớp','20/10','Hihi','Cute!','Đỉnh!','Yêu cả lớp','Quá chời'];
+ for(let i=0;i<26;i++){
+  const e=document.createElement('div'),t=i%5===4;
+  e.className='fall'+(t?' t':'');
+  e.textContent=t?TX[(i/5|0)%TX.length]:EM[i%EM.length];
+  if(!t)e.style.fontSize=rnd(26,42)+'px';
+  e.style.left=rnd(0,92)+'%';
+  e.style.setProperty('--dx',rnd(-80,80)+'px');
+  e.style.setProperty('--rot',(t?rnd(-25,25):rnd(-360,360))+'deg');
+  e.style.animationDuration=rnd(8,16)+'s';e.style.animationDelay='-'+rnd(0,16)+'s';
+  box.appendChild(e);
+ }
+ for(let i=0;i<14;i++){
+  const p=document.createElement('i');p.className='petal';
+  p.style.left=rnd(0,100)+'%';
+  p.style.setProperty('--dx',rnd(-60,60)+'px');p.style.setProperty('--rot','540deg');
+  p.style.animationDuration=rnd(7,14)+'s';p.style.animationDelay='-'+rnd(0,14)+'s';
+  box.appendChild(p);
+ }
+})();
+
+/* ============ ẢNH POLAROID ============ */
+const imgOf=(s,i)=>s.img||('images/'+pad(i)+'.jpg');
+function polaroid(s,i,small){
+ return '<div class="pic"><img src="'+imgOf(s,i)+'" alt="Ảnh '+s.name+'" loading="lazy" onerror="this.parentNode.classList.add(\'noimg\');this.remove()"><span class="ph">'+s.name.trim().split(' ').pop().charAt(0)+'</span></div>'+
+ '<div class="cap">'+s.name+'</div>'+(small?'<small>'+(s.nick||pick(P.nick,i))+'</small>':'');
+}
+const frame=document.getElementById('frame');
+S.forEach((s,i)=>{
+ const b=document.createElement('button');b.className='pol';b.dataset.i=i;
+ b.style.setProperty('--r',(Math.random()*6-3).toFixed(1)+'deg');
+ b.style.setProperty('--t',(Math.random()*10-5).toFixed(1)+'deg');
+ b.setAttribute('aria-label','Mở trang của '+s.name);
+ b.innerHTML=polaroid(s,i,false);
+ b.onclick=()=>open(i);frame.appendChild(b);
+});
+const rc=document.createElement('div');rc.className='rosecell';rc.dataset.i=S.length;
+garden(rc,1);rc.querySelector('.fl').style.height='92%';frame.appendChild(rc);
+/* Xếp các ô quanh viền: bắt đầu ở ô thứ 2 hàng trên, đi theo chiều kim đồng hồ */
+function layout(){
+ const big=matchMedia('(min-width:800px)').matches,C=big?8:5,R=big?6:9,pos=[];
+ for(let c=2;c<=C;c++)pos.push([1,c]);
+ for(let r=2;r<=R;r++)pos.push([r,C]);
+ for(let c=C-1;c>=1;c--)pos.push([R,c]);
+ for(let r=R-1;r>=1;r--)pos.push([r,1]);
+ frame.querySelectorAll('[data-i]').forEach(el=>{const p=pos[+el.dataset.i];el.style.gridRow=p[0];el.style.gridColumn=p[1]});
+}
+layout();matchMedia('(min-width:800px)').addEventListener('change',layout);
+
+/* ============ TRANG RIÊNG ============ */
+const modal=document.getElementById('modal'),page=document.getElementById('page');let cur=0;
+function open(i){
+ cur=(i+S.length)%S.length;const s=S[cur];
+ page.style.animation='none';void page.offsetWidth;page.style.animation='';
+ page.innerHTML='<div class="left"><div class="pol" style="--t:-3deg">'+polaroid(s,cur,false)+'</div></div>'+
+ '<div class="right"><h3>'+s.name+'</h3><span class="badge">'+(s.nick||pick(P.nick,cur))+'</span>'+
+ '<div class="item"><b>Tài năng</b><span>'+(s.tal||pick(P.tal,cur))+'</span></div>'+
+ '<div class="item"><b>Thói quen khó bỏ</b><span>'+(s.hab||pick(P.hab,cur))+'</span></div>'+
+ '<div class="item"><b>Kỷ niệm đáng nhớ</b><span>'+(s.mem||pick(P.mem,cur))+'</span></div>'+
+ '<p class="wish">'+(s.wish||pick(P.wish,cur))+' 🌹</p></div>';
+ modal.classList.add('on');document.body.classList.add('lock');page.scrollTop=0;
+}
+function close(){modal.classList.remove('on');document.body.classList.remove('lock')}
+document.getElementById('close').onclick=close;
+document.getElementById('prev').onclick=()=>open(cur-1);
+document.getElementById('next').onclick=()=>open(cur+1);
+modal.addEventListener('click',e=>{if(e.target===modal)close()});
+document.addEventListener('keydown',e=>{
+ if(!modal.classList.contains('on'))return;
+ if(e.key==='Escape')close();if(e.key==='ArrowLeft')open(cur-1);if(e.key==='ArrowRight')open(cur+1);
+});
+
+/* ============ NHẠC ============ */
+const bgm=document.getElementById('bgm'),mb=document.getElementById('music'),mt=document.getElementById('mtext');
+let on=false;
+function setUI(){mb.classList.toggle('play',on);mt.textContent=on?'Tắt nhạc':'Bật nhạc'}
+function play(){bgm.volume=.6;return bgm.play().then(()=>{on=true;setUI()}).catch(()=>{})}
+mb.onclick=e=>{e.stopPropagation();if(on){bgm.pause();on=false;setUI();userOff=true}else{play()}};
+let userOff=false;
+/* Trình duyệt chặn tự phát nhạc, nên nhạc sẽ vang lên ở lần chạm/cuộn đầu tiên */
+['pointerdown','keydown','touchstart'].forEach(ev=>addEventListener(ev,function f(e){
+ if(e.target&&e.target.closest&&e.target.closest('#music'))return;
+ if(!on&&!userOff)play();removeEventListener(ev,f);
+},{passive:true}));
+play();
+</script>
+</body>
+</html>
